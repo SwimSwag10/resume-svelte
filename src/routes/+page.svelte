@@ -1,59 +1,28 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+  import Nav from "$lib/components/Nav.svelte";
+  import Button from "$lib/components/Button.svelte";
+  import TopBar from "$lib/components/TopBar.svelte";
+  import SideBar from "$lib/components/SideBar.svelte";
+  import Footer from "$lib/components/Footer.svelte";
+  import imgArtboard from "$lib/assets/artboard.svg";
+  import imgMan from "$lib/assets/man.png";
+  import imgWoman from "$lib/assets/woman.png";
+  import imgComputer from "$lib/assets/computer.png";
+  import imgComputer2 from "$lib/assets/computer2.png";
+  import imgMap from "$lib/assets/united_states_map.png";
+  import "../app.css"
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+<TopBar />
+<div class="mt-[5rem]">
+  <SideBar />
+  <div class="flex flex-col gap-3 h-fit ml-[7rem] lg:ml-[14rem] p-[1rem]">
+    <div class="flex flex-col gap-3 lg:flex-row justify-between">
+      <h2 class="text-2xl font-bold">Dashboard</h2>
+      <div class="flex gap-4">
+        <button class="border border-black bg-white rounded-full w-[12.5rem] py-[2px] text-center">Add New Contact</button>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</div>
