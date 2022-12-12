@@ -2,7 +2,6 @@
   import Nav from "$lib/components/Nav.svelte";
   import TopBar from "$lib/components/TopBar.svelte";
   import Footer from "$lib/components/Footer.svelte";
-  import Landing from "$lib/components/Landing.svelte";
   import imgArtboard from "$lib/assets/artboard.svg";
   import imgMan from "$lib/assets/man.png";
   import imgWoman from "$lib/assets/woman.png";
@@ -12,8 +11,17 @@
   import "../app.css"
 </script>
 
-<div class="">
+<div class="bg-[#FFC331]">
   <TopBar />
-  <Landing />
-  <Footer />
+  <div class="mt-[5rem]">
+    <div class="flex flex-col gap-3 h-fit ml-[7rem] lg:ml-[14rem] p-[1rem]">
+      <div class="flex flex-col gap-3 lg:flex-row justify-between">
+        <h2 class="text-2xl font-bold">Dashboard</h2>
+        <div class="flex gap-4">
+          <button class="border border-black bg-white rounded-full w-[12.5rem] py-[2px] text-center">Add New Contact</button>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  </div>
 </div>
